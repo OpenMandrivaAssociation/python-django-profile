@@ -15,7 +15,7 @@ URL:            http://code.google.com/p/django-profile/
 Source:         %{realname}-%{version}-%{vcstag}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
-BuildRequires:  python-devel 
+BuildRequires:  python-devel python-setuptools
 Requires:       python-django python-imaging
 
 %description
@@ -37,6 +37,9 @@ in the package.
 rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
 
+# delete unpackaged files
+rm -rf %{buildroot}%{py_puresitedir}/demo
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -44,5 +47,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc INSTALL.txt CHANGELOG.txt LICENSE.txt README.txt TODO.txt demo/
 %{py_puresitedir}/*
-%exclude %{py_puresitedir}/demo
-
