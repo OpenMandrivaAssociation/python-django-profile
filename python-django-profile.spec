@@ -1,7 +1,7 @@
 %define realname django-profile
 %define name    python-%{realname}
 %define version 0.6
-%define release %mkrel 1
+%define release 2
 %define vcsdate 20090813
 %define vcstag r420
 
