@@ -11,7 +11,7 @@ Release:        %{release}
 Summary:        Django pluggable user profile zone
 Group:          Development/Python
 License:        BSD
-URL:            http://code.google.com/p/django-profile/
+URL:            https://code.google.com/p/django-profile/
 Source:         %{realname}-%{version}-%{vcstag}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
